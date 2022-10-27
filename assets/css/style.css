@@ -10,7 +10,7 @@
   --Color-Light-Pink: #ffa7c3;
   --Color-White: #ffffff;
   --Color-Gradient-1: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
-  --Color-Gradient-1: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+  --Color-Gradient-2: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
 }
 
 /* Global */
@@ -28,7 +28,10 @@ html {
 body {
   font-family: var(--Font-Family);
   padding: 1.6rem 1.6rem 0 1.6rem;
+  overflow: hidden;
 }
+
+/* Buttons */
 
 .btn {
   color: var(--Color-White);
@@ -47,12 +50,51 @@ body {
   background: var(--Color-Light-Blue);
 }
 
+.btn--primary {
+  background: var(--Color-Gradient-1);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+}
+
 /* Header */
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+/* Section hero */
+
+.hero h1 {
+  color: var(--Color-Dark-Blue);
+  font-size: 4rem;
+  line-height: 51px;
+  margin-bottom: 2.6rem;
+}
+
+.hero p {
+  color: var(--Color-Grey);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.hero__text {
+  margin-bottom: 4.6rem;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
 }
 
 /* Media */
@@ -71,5 +113,17 @@ body {
   .btn {
     font-size: 1.8rem;
     padding: 1.4rem 3.2rem;
+  }
+
+  .hero h1 {
+    font-size: 5.6rem;
+    line-height: 70px;
+    margin-bottom: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.8rem;
+    line-height: 28px;
+    margin-bottom: 4rem;
   }
 }
