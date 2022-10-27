@@ -27,4 +27,49 @@ html {
 
 body {
   font-family: var(--Font-Family);
+  padding: 1.6rem 1.6rem 0 1.6rem;
+}
+
+.btn {
+  color: var(--Color-White);
+  font-size: 1.6rem;
+  text-decoration: none;
+  line-height: 28px;
+  border-radius: 2.8rem;
+  padding: 1.1rem 2.4rem;
+}
+
+.btn--dark {
+  background: var(--Color-Dark-Blue);
+}
+
+.btn--dark:hover {
+  background: var(--Color-Light-Blue);
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Media */
+
+@media (min-width: 768px) {
+  body {
+    padding: 2.4rem 4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding: 2.4rem 16.5rem;
+  }
+
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.4rem 3.2rem;
+  }
 }
